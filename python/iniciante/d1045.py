@@ -21,17 +21,22 @@ Imprima todas as classificações do triângulo especificado na entrada.
 
 
 a, b, c = map(float, input().split())
-
 valores = [a, b, c]
 valores.sort(reverse=True)
+a, b, c = valores
 
+if a >= b + c:
+    print("NAO FORMA TRIANGULO")
+else:
+    if a**2 == b**2 + c**2:
+        print("TRIANGULO RETANGULO")
+    if a**2 > b**2 + c**2:
+        print("TRIANGULO OBTUSANGULO")
+    if a**2 < b**2 + c**2:
+        print("TRIANGULO ACUTANGULO")
 
+    if a == b == c:
+        print("TRIANGULO EQUILATERO")
+    elif a == b or b == c or a == c:
+        print("TRIANGULO ISOSCELES")
 
-
-""" se A ≥ B+C, apresente a mensagem: NAO FORMA TRIANGULO
-se A2 = B2 + C2, apresente a mensagem: TRIANGULO RETANGULO
-se A2 > B2 + C2, apresente a mensagem: TRIANGULO OBTUSANGULO
-se A2 < B2 + C2, apresente a mensagem: TRIANGULO ACUTANGULO
-se os três lados forem iguais, apresente a mensagem: TRIANGULO EQUILATERO
-se apenas dois dos lados forem iguais, apresente a mensagem: TRIANGULO 
-ISOSCELES """
