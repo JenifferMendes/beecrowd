@@ -1,5 +1,5 @@
-"""
-Sua empresa está fazendo um levantamento de quantos clientes estão cadastrados nos estados, porém, faltou levantar os dados do estado do Rio Grande do Sul.
+
+/* Sua empresa está fazendo um levantamento de quantos clientes estão cadastrados nos estados, porém, faltou levantar os dados do estado do Rio Grande do Sul.
 
 Então você deve Exibir o nome de todos os clientes cujo estado seja ‘RS’.
 
@@ -26,9 +26,8 @@ Exemplo de Saída
 name
 Pedro Augusto da Rocha
 Jane Ester
-Marcos Antônio dos Santos
- 
-"""
+Marcos Antônio dos Santos */
+
 
 SELECT name FROM customers
 WHERE state = 'RS';
