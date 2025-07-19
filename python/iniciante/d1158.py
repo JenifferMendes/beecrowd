@@ -19,20 +19,11 @@ Imprima a soma dos consecutivos números ímpares a partir do valor X.
 
 
 n = int(input())
-soma = 0
 
 for c in range(0, n):
+    soma = 0
     x, y = map(int, input().split())
-    if x % 2 == 0:
-        i = x + 1
-        soma = i
-        for k in range(0, y - 1):
-            i += 2
-            soma += i
-        print(soma)
-    else:
-        soma = x
-        for g in range(0, y - 1):
-            x += 2
-            soma += x
-        print(soma)
+    for k in range(x, y * 2 + x):
+        if k % 2 == 1:
+            soma += k
+    print(soma)
