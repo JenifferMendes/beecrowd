@@ -21,18 +21,22 @@ ele deverá ser lido novamente, tantas vezes quantas forem necessárias.
 Saída
 Imprima uma linha com um número inteiro que representa a quantidade de números 
 inteiros que devem ser somadas, de acordo com a especificação acima.
-
 """
 
-numeros = []
+x = int(input())
 
-for c in range(0, 10):
-    num = int(input())
-    numeros.append(num)
+soma = 0
+quantidade = 0
+numero = x
 
-for p, v in enumerate(numeros):
-    if v <=0:
-        numeros[p] = 1
+while True:
+    z = int(input())
+    if z > x:
+        break
 
-for a,b in enumerate(numeros):
-    print(f"X[{a}] = {b}")
+while soma <= z:
+    soma += numero
+    quantidade += 1
+    numero += 1
+
+print(quantidade)
